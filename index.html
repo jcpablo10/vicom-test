@@ -5,8 +5,183 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prueba Técnica Vicom</title>
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+
 </head>
 <body>
-    
+    <div class="notification__container">
+        <p class="notification__text"></p>
+    </div>
+    <nav>
+        <div class="header__container">
+            <img src="" alt="lavasconia.com">
+        </div>
+        <div class="header__nav">
+            <ul>
+                <li class="header__nav--item">
+                    <a href="#" class="header__nav--link">
+                        Cocción
+                    </a>
+                </li>
+                <li class="header__nav--item">
+                    <a href="#" class="header__nav--link">
+                        Preparación
+                    </a>
+                </li>
+                <li class="header__nav--item">
+                    <a href="#" class="header__nav--link">
+                        Mesa y accesorios
+                    </a>
+                </li>
+                <li class="header__nav--item">
+                    <a href="#" class="header__nav--link">
+                        Consumibles
+                    </a>
+                </li>
+                <li class="header__nav--item">
+                    <a href="#" class="header__nav--link">
+                        Electrodomésticos
+                    </a>
+                </li>
+                <li class="header__nav--item">
+                    <a href="#" class="header__nav--link">
+                        Linea profesional
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="header__user">
+            <ul>
+                <li>
+                    <a href="#">
+                        <img src="" alt="Account user"/>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="" alt="Cart"/>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <!-- Hero container -->
+        <section class="section__large">
+            <div class="hero__logo">
+                <img src="" alt="Ekco logo">
+            </div>
+            <div class="hero__content">
+                <div class="hero__grid">
+                    <div class="hero__item">
+                        
+                    </div>
+                    <div class="hero__item">
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Receips -->
+
+        <section>
+
+        </section>
+
+        <!-- Best sellers -->
+        <section>
+            <div class="slider">
+                <div class="item">
+                    1
+                </div>
+                <div class="item">
+                    2
+                </div>
+                <div class="item">
+                    3
+                </div>
+                <div class="item">
+                    4
+                </div>
+                <div class="item">
+                    5
+                </div>
+                <div class="item">
+                    6
+                </div>
+                <div class="item">
+                    7
+                </div>
+                <div class="item">
+                    8
+                </div>
+                <div class="item">
+                    9
+                </div>
+                <div class="item">
+                    10
+                </div>
+                <div class="item">
+                    11
+                </div>
+                <div class="item">
+                    12
+                </div>
+                <div class="item">
+                    13
+                </div>
+                <div class="item">
+                    14
+                </div>
+                <div class="item">
+                    15
+                </div>
+                <div class="item">
+                    16
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+
 </body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script>
+    $(".slider").slick({
+    
+        // normal options...
+        infinite: false,
+
+        // the magic
+        responsive: [{
+
+            breakpoint: 1024,
+            settings: {
+            slidesToShow: 3,
+            infinite: true
+            }
+
+        }, {
+
+            breakpoint: 600,
+            settings: {
+            slidesToShow: 2,
+            dots: true
+            }
+
+        }, {
+
+            breakpoint: 300,
+            settings: "unslick" // destroys slick
+
+        }]
+    });
+    console.log('after slide')
+</script>
 </html>
