@@ -1,0 +1,20 @@
+@import 'vars';
+@import 'fonts';
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Museo Sans 500';
+}
+
+.notification {
+    background-color: $yellow;
+    height: 50px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.notification__text {
+    text-transform: uppercase;
+}
