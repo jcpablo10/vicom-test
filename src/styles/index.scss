@@ -43,7 +43,7 @@ nav {
     align-items: center;
 }
 .header__nav {
-    
+    // padding-left: 0;
 }
 
 .header__nav--item {
@@ -97,6 +97,9 @@ nav {
 .recipe__title {
     font-size: 3rem;
 }
+.recipe__img {
+    width: 100%;
+}
 .btn {
     font-family: 'Museo Sans 500';
     text-transform: uppercase;
@@ -123,7 +126,6 @@ nav {
     text-align: center;
 }
 .slider {
-    overflow: hidden;
     padding-left: 0;
     width: 90%;
     margin: 0 auto;
@@ -138,7 +140,97 @@ nav {
 }
 .slider__title {
     text-transform: uppercase;
+    text-align: left;
 }
 .slider__description {
     margin: .1rem 0;
+    text-align: left;
 }
+.slick-next {
+    border: 1px solid green;
+}
+.slider__controls {
+    width: 90%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0 auto;
+}
+#slide_prev, #slide_next {
+    border: 2px solid $yellow;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+}
+
+// exercises
+
+.exercises {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 90%;
+    margin: 0 auto;
+    grid-gap: 2rem;
+}
+.list__faq {
+    // min-width: 300px;    
+    padding-left: 0;
+    width: 100%;
+}
+.faq__item {
+    
+    list-style-type: none;
+    transition: .3s all;
+    a {
+        
+        width: 100%;
+        display: block;
+        min-height: 40px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        background-color: $yellow;
+        color: white;
+        border-bottom: 1px solid black;
+        padding: 0 1rem;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
+    p {
+        height: 0;
+        display: none;
+        margin: 0;
+        padding: 1rem;
+        box-sizing: border-box;
+        transition: .3s all;
+    }
+    
+}
+.faq__item.active {
+    transition: .3s all;
+    p {
+        height: auto;
+        display: block;
+        transition: .3s all;
+    }
+}
+.faq__item:hover {
+    cursor: pointer;
+} 
+
+.personaje {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.personaje__img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+}
+.list__episodios {
+    
+}
+
+@import 'responsive';
