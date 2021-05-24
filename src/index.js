@@ -23,8 +23,49 @@ logoEkco.src = imgEkco
 heroBanner.src = imgHeroBanner
 recipeImg.src = imgRecipe
 
-console.log(sliderImgAsArray)
-
 sliderImgAsArray.map((item,idx) => {
     item.src = imgSliderList[idx]
 })
+
+// 
+
+const faqList = document.querySelectorAll('.faq__item')
+
+for (let index = 0; index < faqList.length; index++) {
+    faqList[index].addEventListener('click', ()=> {
+        faqList[index].classList.toggle('active')
+    })
+    
+}
+
+
+const characterImg = document.querySelector('#characterImg')
+const characterName = document.querySelector('#characterName')
+const characterGender = document.querySelector('#characterGender')
+const episodesList = document.querySelector('#episodesList')
+
+let getCharacter = async () => {
+    let characterData = await fetch('https://rickandmortyapi.com/api/character/2')
+    .then(response => response.json())
+    .then(data => {
+        return data
+    })
+    return characterData
+}
+
+
+
+let renderCharacter = async () => {
+    let character = await getCharacter()
+    characterImg.src = character.image
+    characterName.innerHTML = character.name
+    characterGender.innerHTML = character.gender
+    
+    for (let index = 0; index < 5; index++) {
+        episodesList.innerHTML += `<li>${character.episode[index]}</li>`
+        
+    }
+    
+}
+
+renderCharacter();

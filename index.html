@@ -64,8 +64,7 @@
                 </a>
             </li>
         </ul>
-        <div class="header__user">
-        </div>
+        
     </nav>
     <main>
         <!-- Hero container -->
@@ -74,7 +73,7 @@
                 <img alt="Ekco logo" id="logo_ekco" class="hero__img">
             </div>
             <div class="hero__content">
-                <img alt="" id="hero_banner">
+                <img alt="" id="hero_banner" class="hero__banner">
             </div>
         </section>
         <!-- Recipe -->
@@ -101,7 +100,10 @@
         <!-- Best sellers -->
         <section>
             <h2 class="bestsellers__title">Los más vendidos</h2>
-            
+            <div class="slider__controls">
+                <a href="btn__slide" id="slide_prev"></a>
+                <a href="btn__slide" id="slide_next"></a>
+            </div>
             <ul class="slider">
                 <li class="slider__item">
                     <img class="slider__img" alt="Product image">
@@ -282,36 +284,45 @@
             </ul>
         </section>
         <section>
-            <ul class="#list__faq">
-                <li>
-                    <a class="#">Pregunta 1</a>
-                    <p class="">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus obcaecati ipsa facere temporibus, nesciunt nobis? Consequuntur ullam enim, tempore distinctio inventore explicabo, nobis in repellendus ut nesciunt veritatis, molestias ratione!
-                    </p>
-                </li>
-                <li>
-                    <a class="#">Pregunta 1</a>
-                    <p class="">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus obcaecati ipsa facere temporibus, nesciunt nobis? Consequuntur ullam enim, tempore distinctio inventore explicabo, nobis in repellendus ut nesciunt veritatis, molestias ratione!
-                    </p>
-                </li>
-                <li>
-                    <a class="#">Pregunta 1</a>
-                    <p class="">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus obcaecati ipsa facere temporibus, nesciunt nobis? Consequuntur ullam enim, tempore distinctio inventore explicabo, nobis in repellendus ut nesciunt veritatis, molestias ratione!
-                    </p>
-                </li>
-            </ul>
-            <section>
-                <h3>Personaje</h3>
-                <div>
-                    <img src="" alt="">
-                    <ul>
-                        <li>Nombre</li>
-                        <li>Género</li>
-                        <li>Primeros episodios</li>
-                    </ul>
-                </div>
+            <h2 class="bestsellers__title">Ejercicios</h2>
+            <section class="exercises">
+                <ul class="list__faq">
+                    <li class="faq__item">
+                        <a class="#">Pregunta 1 ></a>
+                        <p class="">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus obcaecati ipsa facere temporibus, nesciunt nobis? Consequuntur ullam enim, tempore distinctio inventore explicabo, nobis in repellendus ut nesciunt veritatis, molestias ratione!
+                        </p>
+                    </li>
+                    <li class="faq__item">
+                        <a class="#">Pregunta 2 ></a>
+                        <p class="">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus obcaecati ipsa facere temporibus, nesciunt nobis? Consequuntur ullam enim, tempore distinctio inventore explicabo, nobis in repellendus ut nesciunt veritatis, molestias ratione!
+                        </p>
+                    </li>
+                    <li class="faq__item">
+                        <a class="#">Pregunta 3 ></a>
+                        <p class="">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus obcaecati ipsa facere temporibus, nesciunt nobis? Consequuntur ullam enim, tempore distinctio inventore explicabo, nobis in repellendus ut nesciunt veritatis, molestias ratione!
+                        </p>
+                    </li>
+                </ul>
+
+                <section>
+                    <h3>Personaje</h3>
+                    <div class="personaje">
+                        <img alt="" id="characterImg" class="personaje__img">
+                        <ul>
+                            <li id="characterName">Nombre</li>
+                            <li id="characterGender">Género</li>
+                            
+                            
+                        </ul>
+                        <span>Primeros 5 episodios:</span>
+                        <ol id="episodesList" class="list__episodios">
+
+                        </ol>
+                    </div>
+                </section>
             </section>
         </section>
     </main>
@@ -328,10 +339,12 @@
         dots: true,
         infinite: false,
         speed: 300,
-        slidesToShow: 1,
+        slidesToShow: 4,
         centerMode: false,
-        variableWidth: true
+        variableWidth: true,
+        arrows: true,
+        nextArrow: '#slide_next',
+        prevArrow: '#slide_prev'
     });
-    console.log('after slide')
 </script>
 </html>
