@@ -1,0 +1,22 @@
+@media screen and (max-width: 1300px) {
+    .header__nav {
+        display: none;
+    }
+    .personaje {
+        grid-template-columns: 1fr;
+    }
+}
+@media screen and (max-width: 768px) {
+    .section__recipe {
+        grid-template-columns: 1fr;
+    }
+    .exercises {
+        grid-template-columns: 1fr;
+    }
+    .bestsellers__title {
+        font-size: 2rem;
+    }
+    .list__episodios {
+        font-size: 12px;
+    }
+}
