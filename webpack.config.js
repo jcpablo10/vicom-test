@@ -26,11 +26,10 @@ module.exports = {
         ],
       },
       {
-        test: /\.(png|jpe?g|gif|otf|svg)$/i,
+        test: /\.(png|jpe?g|gif|otf|svg|webp)$/i,
         use: [
-          {
-            loader: 'file-loader',
-          },
+          'file-loader',
+          'webp-loader'
         ],
       },
     ],
